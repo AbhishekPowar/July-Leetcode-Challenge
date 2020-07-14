@@ -9,5 +9,5 @@ def angleClock(self, hour: int, minutes: int) -> float:
         hour_movement = hour*hour_delta_hour + minutes*hour_delta_per_minute
 
         minute_movement =  minutes*minute_delta_minute
-        ans  = min(abs(hour_movement-minute_movement),360-abs(hour_movement-minute_movement))
-        return ans
+        angle  = min(abs(hour_movement-minute_movement),360-abs(hour_movement-minute_movement))
+        return angle
