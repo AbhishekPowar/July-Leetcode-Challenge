@@ -12,3 +12,17 @@ def removeElements(head, val):
         else:
             return head
     return remove(head, val)
+
+# Iterative
+
+
+def removeElements(head, val):
+    root = ListNode('root')
+    root.next = head
+    cur = root
+    while cur:
+        if cur.next and cur.next.val == val:
+            cur.next = cur.next.next
+        else:
+            cur = cur.next
+    return root.next
