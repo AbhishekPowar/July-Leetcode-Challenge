@@ -5,7 +5,6 @@ class Solution:
 
         def find(word, idx, i, j, visited):
             if word[idx] == board[i][j]:
-                print(word[idx], idx, i, j, visited)
                 if self.maxx == idx+1:
                     return True
                 if (i, j) not in visited:
@@ -17,7 +16,6 @@ class Solution:
                             if find(word, idx+1, i+dx, j+dy, visitedN):
                                 return True
 
-                            print('\n')
                     visited.remove((i, j))
                     return False
                 else:
@@ -32,7 +30,6 @@ class Solution:
         flag = 0
         for i in range(self.rows):
             for j in range(self.cols):
-                print(f'\n_____{i}__{j}____\n')
                 ret = find(word, 0, i, j, set())
                 if ret:
                     flag = 1
