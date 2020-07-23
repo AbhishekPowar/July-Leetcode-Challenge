@@ -6,10 +6,10 @@ class Solution:
         return [a[0], b[0]]
 
         # better solution
-        s = set()
+        hashSet = set()
         for i in nums:
-            if i in s:
-                s.remove(i)
+            if i in hashSet:
+                hashSet.remove(i)
             else:
-                s.add(i)
-        return s
+                hashSet.add(i)
+        return hashSet
