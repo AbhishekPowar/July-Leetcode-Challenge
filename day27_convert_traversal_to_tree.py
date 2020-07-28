@@ -5,6 +5,8 @@
 #         self.left = left
 #         self.right = right
 
+# better solution will be added
+
 
 class Solution:
     def buildTree(self, inorder: List[int], postorder: List[int]) -> TreeNode:
